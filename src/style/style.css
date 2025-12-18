@@ -41,6 +41,20 @@ nav {
   top: 0;
   z-index: 100;
   box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
 }
 
 nav ul {
@@ -483,7 +497,7 @@ textarea {
 /* ================================
    RESPONSIVE DESIGN
    ================================ */
-@media (max-width: 768px) {
+@media (max-width: 894px) {
   header h1 {
     font-size: 2rem;
   }
@@ -492,23 +506,49 @@ textarea {
     font-size: 1rem;
   }
 
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
   nav ul {
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+    max-width: none;
+    padding: 0;
+    display: none;
+    margin-top: 1rem;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav li {
+    width: 100%;
   }
 
   nav a {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
+    display: block;
+    padding: 0.8rem 1rem;
+    border-radius: 0;
+    font-size: 1rem;
   }
 
   nav a::after {
-    left: 0.8rem;
-    width: calc(100% - 1.6rem);
+    display: none;
   }
 
-  nav a:hover::after,
-  nav a.active::after {
-    width: calc(100% - 1.6rem);
+  nav a:hover,
+  nav a.active {
+    background-color: var(--secondary-color);
+    color: var(--white);
   }
 
   .about-content {

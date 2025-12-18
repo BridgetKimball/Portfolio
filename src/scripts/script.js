@@ -1,10 +1,29 @@
 // ================================
-// NAVIGATION ACTIVE STATE
+// NAVIGATION ACTIVE STATE & HAMBURGER MENU
 // ================================
 document.addEventListener('DOMContentLoaded', function() {
     updateActiveNavLink();
     setupFormHandling();
+    setupHamburgerMenu();
 });
+
+function setupHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.querySelector('nav ul');
+
+    if (hamburger) {
+        hamburger.addEventListener('click', function() {
+            navMenu.classList.toggle('active');
+        });
+
+        // Close menu when a link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function() {
+                navMenu.classList.remove('active');
+            });
+        });
+    }
+}
 
 function updateActiveNavLink() {
     // Get current page from URL
