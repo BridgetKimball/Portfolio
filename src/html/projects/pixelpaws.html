@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPaws - Bridget Kimball</title>
+    <link rel="stylesheet" href="../../style/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../../../index.html" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="../experience.html" class="nav-link" data-page="experience">Experience</a></li>
+            <li><a href="../projects.html" class="nav-link active" data-page="projects">Academic Projects</a></li>
+            <li><a href="../education.html" class="nav-link" data-page="education">Education</a></li>
+            <li><a href="../extracurriculars.html" class="nav-link" data-page="extracurriculars">Extracurriculars</a></li>
+            <li><a href="../contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <h1>PixelPaws</h1>
+        <p>A Virtual Pet Simulation Game</p>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section>
+            <div class="right-align-margin">
+                <a href="../projects.html" class="btn btn-secondary">← Back to Projects</a>
+            </div>
+
+            <h2>Project Overview</h2>
+            <p>
+                PixelPaws is an interactive web-based pet simulation game that allows users to create, care for, and interact with virtual pets. The project demonstrates proficiency in web development, game mechanics, and user interface design.
+            </p>
+
+            <h3>Project Details</h3>
+            <div class="card">
+                <div class="card-title">Project Information</div>
+                <div class="margin-top-1rem">
+                    <p><strong>Date Completed:</strong> [Semester/Year]</p>
+                    <p><strong>Duration:</strong> [Length of project]</p>
+                    <p><strong>Team Size:</strong> [Solo/Team size]</p>
+                    <p><strong>Live Demo:</strong> <a href="https://example.com/pixelpaws" target="_blank">View PixelPaws</a></p>
+                </div>
+            </div>
+
+            <h3>Objective</h3>
+            <p>
+                The goal was to create an engaging web application that combines game mechanics with a clean, intuitive user interface. Users should be able to create and name their own virtual pets, feed them, play with them, and watch them grow and develop unique personalities.
+            </p>
+
+            <h3>Key Features</h3>
+            <div class="features-grid">
+                <div class="card">
+                    <div class="card-title">Pet Creation</div>
+                    <p>Users can create unique pets with custom names, colors, and personalities.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Pet Care Mechanics</div>
+                    <p>Feed, play with, and interact with pets to keep them happy and healthy.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Visual Feedback</div>
+                    <p>Real-time animations showing pet mood and responses to user actions.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Data Persistence</div>
+                    <p>Pet data is saved locally, allowing users to continue where they left off.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Responsive Design</div>
+                    <p>Fully responsive interface that works on desktop and mobile devices.</p>
+                </div>
+                <div class="card">
+                    <div class="card-title">Leaderboard</div>
+                    <p>Track pet achievements and compare with other players.</p>
+                </div>
+            </div>
+
+            <h3>Technologies Used</h3>
+            <div class="skills-list">
+                <div class="skill-item">
+                    <h4>Frontend</h4>
+                    <p>HTML5, CSS3, JavaScript (ES6+)</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Libraries</h4>
+                    <p>Canvas API for Graphics</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Storage</h4>
+                    <p>LocalStorage for Data Persistence</p>
+                </div>
+                <div class="skill-item">
+                    <h4>Tools</h4>
+                    <p>Git, VS Code, Chrome DevTools</p>
+                </div>
+            </div>
+
+            <h3>Implementation Highlights</h3>
+            <div class="card">
+                <div class="card-title">Game State Management</div>
+                <div class="card-description">
+                    Implemented a robust state management system to track pet health, happiness, hunger, and other attributes. The system uses object-oriented JavaScript to create pet objects with their own methods and properties.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Animation and Graphics</div>
+                <div class="card-description">
+                    Utilized the HTML5 Canvas API to create smooth animations for pet movements, expressions, and interactions. The animation loop updates the pet's visual state based on its internal state.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">User Interface</div>
+                <div class="card-description">
+                    Designed an intuitive interface with buttons for different actions (feed, play, sleep, etc.) and a display showing the pet's current status. Used CSS flexbox and grid for responsive layout.
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title">Local Storage Integration</div>
+                <div class="card-description">
+                    Implemented localStorage to persist pet data across browser sessions, allowing players to close and reopen the game without losing their pets.
+                </div>
+            </div>
+
+            <h3>Challenges and Solutions</h3>
+            <table class="challenges-table">
+                <thead>
+                    <tr class="challenges-header-row">
+                        <th class="challenges-header-cell">Challenge</th>
+                        <th class="challenges-header-cell">Solution</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="challenges-cell">Smooth pet animations</td>
+                        <td class="challenges-cell">Used requestAnimationFrame for optimal animation performance</td>
+                    </tr>
+                    <tr>
+                        <td class="challenges-cell">Managing complex pet states</td>
+                        <td class="challenges-cell">Implemented a Pet class to encapsulate all state and behavior</td>
+                    </tr>
+                    <tr>
+                        <td class="challenges-cell">Responsive design across devices</td>
+                        <td class="challenges-cell">Used CSS media queries and flexible layouts</td>
+                    </tr>
+                    <tr>
+                        <td class="challenges-cell">Data persistence</td>
+                        <td class="challenges-cell">Used JSON serialization with localStorage</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Learning Outcomes</h3>
+            <ul class="learning-outcomes-list">
+                <li>Deepened understanding of JavaScript OOP principles</li>
+                <li>Gained experience with Canvas API and graphics programming</li>
+                <li>Learned effective state management techniques</li>
+                <li>Improved UX/UI design skills</li>
+                <li>Practiced responsive web design</li>
+                <li>Strengthened version control and Git workflows</li>
+            </ul>
+
+            <h3>Future Improvements</h3>
+            <div class="future-improvements-grid">
+                <div class="card">
+                    <p><strong>Multiplayer Features:</strong> Add ability to trade pets or battle with other players</p>
+                </div>
+                <div class="card">
+                    <p><strong>Advanced Graphics:</strong> Implement WebGL for enhanced visual effects</p>
+                </div>
+                <div class="card">
+                    <p><strong>Backend Integration:</strong> Move to a full-stack application with server-side persistence</p>
+                </div>
+                <div class="card">
+                    <p><strong>Mobile App:</strong> Convert to a React Native or Flutter mobile application</p>
+                </div>
+            </div>
+
+            <div class="centered-margin-top">
+                <a href="https://example.com/pixelpaws" target="_blank" class="btn">Play PixelPaws</a>
+                <a href="../projects.html" class="btn btn-secondary ml-1rem">Back to Projects</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bridget Kimball. All rights reserved.</p>
+        <p>Created with passion for web development</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bridget-kimball/" title="LinkedIn">in</a>
+            <a href="https://github.com" title="GitHub">gh</a>
+            <a href="mailto:your-email@example.com" title="Email">@</a>
+        </div>
+    </footer>
+
+    <script src="../../scripts/script.js"></script>
+</body>
+</html>
