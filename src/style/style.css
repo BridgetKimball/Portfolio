@@ -248,6 +248,30 @@ section h4 {
   padding: 1.5rem;
 }
 
+.project-card-image {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: var(--light-bg);
+  border-bottom: 1px solid #ddd;
+}
+
+.project-card-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.centered-image-container {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.pixelpaws-image {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 .project-card-title {
   font-size: 1.3rem;
   color: var(--primary-color);
@@ -423,8 +447,8 @@ footer a:hover {
 }
 
 .profile-image {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--secondary-color);
