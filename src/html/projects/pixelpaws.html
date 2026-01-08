@@ -34,11 +34,22 @@
             </div>
 
             <h2>Overview and Summary</h2>
-            <p>PixelPaws is an interactive web application I designed and developed to bring comfort, creativity, and companionship into the digital space. The goal of the project is to give users a fun, low-stress way to relax and recharge while experiencing some of the emotional benefits of pet ownership without the challenges of cost, time, or housing restrictions.</p>
+            <p>PixelPaws is an interactive web application I designed and developed to bring comfort, creativity, and companionship
+                into the digital space. The goal of the project is to give users a fun, low-stress way to relax and recharge while
+                experiencing some of the emotional benefits of pet ownership without the challenges of cost, time, or housing
+                restrictions.</p>
 
-            <p>PixelPaws was inspired by the positive impact that pets can have on mental health. The application allows users to create and care for a customizable virtual pet that reacts to real-world weather conditions. On a sunny day, the pet might appear cheerful and eager to play. On a rainy afternoon, it may curl up for a nap. These small, reactive details make the pet feel alive and encourage users to take short breaks during the day.</p>
+            <p>PixelPaws was inspired by the positive impact that pets can have on mental health. The application allows users to
+                create and care for a customizable virtual pet that reacts to real-world weather conditions. On a sunny day, the
+                pet might appear cheerful and eager to play. On a rainy afternoon, it may curl up for a nap. These small, reactive
+                details make the pet feel alive and encourage users to take short breaks during the day.</p>
 
-            <p>The web app includes three main pages: Home, Customization, and Play. The Home page displays the pet's current mood or activity, which updates automatically through a weather API. The Customization page lets users personalize their pet by choosing traits such as ears, eyes, tail, color, and name. The Play page allows users to feed or interact with their pet through simple and enjoyable actions.</p>
+            <p>The web app includes three main pages: Home, Customization, and Play. The Home page displays the pet's current mood
+                or activity, which updates automatically through a weather API. The Customization page lets users personalize their
+                pet by choosing traits such as ears, eyes, tail, color, and name. The Play page allows users to feed or interact
+                with their pet through simple and enjoyable actions.</p>
+
+            <br>
 
             <div class="card">
                 <div class="card-title">Project Information</div>
@@ -150,7 +161,112 @@
             </div>
 
             <h3>Code Segments</h3>
-            <p><em>Code examples coming soon. Check the <a href="https://github.com/BridgetKimball/PixelPaws/" target="_blank">GitHub repository</a> for the complete source code.</em></p>
+            <p>Here are examples of code from the PixelPaws project demonstrating various aspects of the application:</p>
+
+            <div class="code-section">
+                <h4>HTML - Pet Display Structure</h4>
+                <p>This HTML demonstrates the semantic structure of the pet display with customizable components:</p>
+                <pre><code>&lt;div class="pet-container"&gt;
+    &lt;div class="pet-display sunny"&gt;
+        &lt;div class="weather-effects"&gt;
+            &lt;div class="star-bg"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        
+        &lt;div class="pet"&gt;
+            &lt;!-- Ears --&gt;
+            &lt;div class="ears"&gt;
+                &lt;div class="ear left"&gt;&lt;/div&gt;
+                &lt;div class="ear right"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            
+            &lt;!-- Face --&gt;
+            &lt;div class="face"&gt;
+                &lt;div class="eyes"&gt;
+                    &lt;div class="eye left"&gt;&lt;/div&gt;
+                    &lt;div class="eye right"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="nose"&gt;&lt;/div&gt;
+                &lt;div class="mouth"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </div>
+
+            <div class="code-section">
+                <h4>CSS - Pet Color Customization</h4>
+                <p>CSS variables and dynamic styling for customizing pet appearance based on user selections:</p>
+                <pre><code>:root {
+    --primary-purple: #660066;
+    --light-purple: #DFCDE7;
+    --pet-gray: #C0C0C0;
+    --pet-pink: #FFB6C1;
+    --pet-ear-inner: #FFC0CB;
+    --sunny-bg: #FFE5B4;
+    --rainy-bg: #B0E0E6;
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+.pet-display {
+    background-color: var(--sunny-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    position: relative;
+    transition: background-color 0.5s ease;
+}
+
+.pet-display.rainy {
+    background-color: var(--rainy-bg);
+}
+
+.pet {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}</code></pre>
+            </div>
+
+            <div class="code-section">
+                <h4>JavaScript - Customization State Management</h4>
+                <p>JavaScript state management system for tracking and updating pet customization options:</p>
+                <pre><code>const petCustomization = {
+    color: 'gray',
+    ears: 'triangles',
+    face: 'default',
+    eyes: 'default',
+    tail: 'default',
+    name: 'Pixel'
+};
+
+const customizationHistory = {
+    undoStack: [],
+    redoStack: [],
+    maxHistorySize: 50,
+
+    saveState(state) {
+        this.undoStack.push(JSON.parse(JSON.stringify(state)));
+        if (this.undoStack.length > this.maxHistorySize) {
+            this.undoStack.shift();
+        }
+        this.redoStack = [];
+        updateUndoRedoButtons();
+    },
+
+    undo() {
+        if (this.undoStack.length === 0) return null;
+        this.redoStack.push(JSON.parse(JSON.stringify(petCustomization)));
+        const previousState = this.undoStack.pop();
+        Object.assign(petCustomization, previousState);
+        updateUndoRedoButtons();
+        return previousState;
+    }
+};</code></pre>
+            </div>
 
             <div class="centered-margin-top">
                 <a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" class="btn">Play PixelPaws</a>
