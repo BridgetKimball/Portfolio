@@ -476,6 +476,15 @@ footer a:hover {
   color: var(--secondary-color);
 }
 
+.learning-outcomes-list {
+  margin-left: 1.5rem;
+  line-height: 1.8;
+}
+
+.learning-outcomes-list li {
+  margin-bottom: 0.5rem;
+}
+
 /* ================================
    CONTACT FORM
    ================================ */
