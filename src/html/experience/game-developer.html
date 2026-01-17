@@ -33,21 +33,10 @@
                 <a href="../experience.html" class="btn btn-secondary">← Back to Experience</a>
             </div>
 
-            <h2>Overview & Summary</h2>
+            <h2>Overview and Summary</h2>
             <p>Collaborated with full-time staff as a computer science intern to develop an adventure mystery game featuring multiple worlds, collectible items, and interactive chests. Designed and built detailed maps using tiles and tile maps, including a village with hills, a moon base with space stations, and a zombie school with classrooms.</p>
 
             <p>Integrated features with Godot, JavaScript, GDScript, and GitHub while adapting quickly to new tools and workflows. Gained hands-on experience in game development, applying creativity, problem-solving, and collaboration in a professional setting.</p>
-
-            <div class="card">
-                <div class="card-title">Position Information</div>
-                <div class="margin-top-1rem">
-                    <p><strong>Position:</strong> Game Developer Intern</p>
-                    <p><strong>Company:</strong> Yobo, Inc.</p>
-                    <p><strong>Duration:</strong> Jun 2021 - Aug 2021 (3 months)</p>
-                    <p><strong>Location:</strong> Ashland, Virginia, United States</p>
-                    <p><strong>Type:</strong> Internship (Hybrid)</p>
-                </div>
-            </div>
 
             <h3>Key Features</h3>
             <div class="features-grid">
@@ -84,11 +73,11 @@
                     <p>GDScript, JavaScript</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Version Control & Collaboration</h4>
+                    <h4>Version Control and Collaboration</h4>
                     <p>Git, GitHub, Agile Methodologies</p>
                 </div>
                 <div class="skill-item">
-                    <h4>Creative & Professional Skills</h4>
+                    <h4>Creative and Professional Skills</h4>
                     <p>Teamwork, Problem-Solving, Creativity, Communication</p>
                 </div>
             </div>
@@ -127,7 +116,7 @@
                 <li>Learned to adapt quickly to new tools and workflows in a fast-paced development environment</li>
             </ul>
 
-            <h3>Future Impact & Applications</h3>
+            <h3>Future Impact and Applications</h3>
             <div class="future-improvements-grid">
                 <div class="card">
                     <p><strong>Enhanced AI Systems:</strong> Implement intelligent NPC behavior and pathfinding algorithms</p>
@@ -144,156 +133,6 @@
                 <div class="card">
                     <p><strong>Procedural Generation:</strong> Implement procedural level generation for dynamic content</p>
                 </div>
-            </div>
-
-            <h3>Code Segments</h3>
-            <p>Here are examples of code from the Game Developer Intern role demonstrating technical accomplishments:</p>
-
-            <div class="code-section">
-                <h4>GDScript - Interactive Chest System</h4>
-                <p>GDScript implementation of an interactive chest that contains collectible items:</p>
-                <pre><code>extends Node2D
-class_name Chest
-
-@export var items: Array = []
-@export var isOpen: bool = false
-@onready var sprite = $Sprite2D
-@onready var animation_player = $AnimationPlayer
-
-signal chest_opened
-signal item_collected(item)
-
-func _ready():
-    sprite.frame = 0 if not isOpen else 1
-    add_to_group("interactive_objects")
-
-func _input_event(viewport, event, shape_idx):
-    if event is InputEventMouseButton and event.pressed:
-        if not isOpen:
-            open_chest()
-
-func open_chest():
-    isOpen = true
-    animation_player.play("open")
-    chest_opened.emit()
-    
-    # Spawn collectible items
-    for item in items:
-        spawn_item(item)
-    
-    # Disable further interaction
-    input_pickable = false
-
-func spawn_item(item_name: String):
-    var item = preload("res://scenes/collectible.tscn").instantiate()
-    item.item_name = item_name
-    item.global_position = global_position + Vector2(randf_range(-30, 30), -50)
-    get_parent().add_child(item)
-    item_collected.emit(item_name)</code></pre>
-            </div>
-
-            <div class="code-section">
-                <h4>GDScript - Tile Map Manager</h4>
-                <p>Tile map manager for handling level loading and rendering:</p>
-                <pre><code">extends TileMap
-class_name LevelManager
-
-@export var level_name: String = ""
-@export var enable_collision: bool = true
-
-var tile_size = 16
-var layer_indices = {
-    "ground": 0,
-    "obstacles": 1,
-    "decorations": 2
-}
-
-func _ready():
-    load_level(level_name)
-    if enable_collision:
-        setup_collision_physics()
-
-func load_level(level: String):
-    # Load tile map data based on level name
-    print("Loading level: ", level)
-    # Tiles are set in the Godot editor
-    update_visibility()
-
-func setup_collision_physics():
-    # Create physics bodies for solid tiles
-    for layer_index in layer_indices.values():
-        for cell in get_used_cells(layer_index):
-            var tile_data = get_cell_tile_data(layer_index, cell)
-            if tile_data and tile_data.get_custom_data("solid"):
-                add_collision_body(cell, layer_index)
-
-func add_collision_body(cell: Vector2i, layer: int):
-    var world_pos = map_to_local(cell)
-    var area = Area2D.new()
-    area.global_position = world_pos
-    area.name = "Collision_" + str(cell)
-    add_child(area)
-
-func update_visibility():
-    show()
-    print("Level '%s' loaded with %d tiles" % [level_name, get_used_cells(0).size()])</code></pre>
-            </div>
-
-            <div class="code-section">
-                <h4>JavaScript - Game Event Manager</h4>
-                <p>JavaScript implementation for managing game events and callbacks:</p>
-                <pre><code>class GameEventManager {
-    constructor() {
-        this.listeners = new Map();
-        this.eventHistory = [];
-    }
-
-    // Subscribe to events
-    on(eventName, callback) {
-        if (!this.listeners.has(eventName)) {
-            this.listeners.set(eventName, []);
-        }
-        this.listeners.get(eventName).push(callback);
-    }
-
-    // Emit events
-    emit(eventName, data = null) {
-        if (this.listeners.has(eventName)) {
-            const callbacks = this.listeners.get(eventName);
-            callbacks.forEach(callback => callback(data));
-        }
-        this.eventHistory.push({
-            name: eventName,
-            data: data,
-            timestamp: Date.now()
-        });
-    }
-
-    // Remove event listener
-    off(eventName, callback) {
-        if (this.listeners.has(eventName)) {
-            const callbacks = this.listeners.get(eventName);
-            const index = callbacks.indexOf(callback);
-            if (index > -1) {
-                callbacks.splice(index, 1);
-            }
-        }
-    }
-
-    // Get event history
-    getHistory(eventName = null) {
-        return eventName 
-            ? this.eventHistory.filter(e => e.name === eventName)
-            : this.eventHistory;
-    }
-}
-
-// Usage example
-const gameEvents = new GameEventManager();
-gameEvents.on("chest_opened", (item) => {
-    console.log("Chest opened with item:", item);
-});
-gameEvents.emit("chest_opened", {itemName: "Gold Key"});</code></pre>
             </div>
 
             <div class="centered-margin-top">
