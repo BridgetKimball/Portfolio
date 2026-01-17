@@ -171,14 +171,14 @@
         &lt;div class="weather-effects"&gt;
             &lt;div class="star-bg"&gt;&lt;/div&gt;
         &lt;/div&gt;
-        
+
         &lt;div class="pet"&gt;
             &lt;!-- Ears --&gt;
             &lt;div class="ears"&gt;
                 &lt;div class="ear left"&gt;&lt;/div&gt;
                 &lt;div class="ear right"&gt;&lt;/div&gt;
             &lt;/div&gt;
-            
+
             &lt;!-- Face --&gt;
             &lt;div class="face"&gt;
                 &lt;div class="eyes"&gt;
@@ -250,7 +250,7 @@ const customizationHistory = {
 
     saveState(state) {
         this.undoStack.push(JSON.parse(JSON.stringify(state)));
-        if (this.undoStack.length > this.maxHistorySize) {
+        if (this.undoStack.length &gt; this.maxHistorySize) {
             this.undoStack.shift();
         }
         this.redoStack = [];
@@ -267,10 +267,11 @@ const customizationHistory = {
     }
 };</code></pre>
             </div>
+            <br>
 
             <div class="centered-margin-top">
-                <a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" class="btn">Play PixelPaws</a>
                 <a href="../projects.html" class="btn btn-secondary ml-1rem">Back to Projects</a>
+                <a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" class="btn">Play PixelPaws</a>
             </div>
         </section>
     </main>
