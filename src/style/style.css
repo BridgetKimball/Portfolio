@@ -279,6 +279,11 @@ section h4 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.pixelpaws-logo {
+  max-width: 80%;
+  height: auto;
+}
+
 .project-card-title {
   font-size: 1.3rem;
   color: var(--primary-color);
