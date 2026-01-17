@@ -7,18 +7,17 @@
     <link rel="stylesheet" href="../../style/style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-content">
-                <div class="nav-brand">Bridget Kimball</div>
-                <ul class="nav-menu">
-                    <li><a href="../../index.html">Home</a></li>
-                    <li><a href="../projects.html">Projects</a></li>
-                    <li><a href="../experience.html">Experience</a></li>
-                    <li><a href="../projects.html#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Navigation -->
+    <nav>
+        <button type="button" class="hamburger" id="hamburger-btn">☰</button>
+        <ul>
+            <li><a href="../../index.html" class="nav-link" data-page="home">Home</a></li>
+            <li><a href="../projects.html" class="nav-link" data-page="projects">Academic Projects</a></li>
+            <li><a href="../experience.html" class="nav-link" data-page="experience">Experience</a></li>
+            <li><a href="../education.html" class="nav-link" data-page="education">Education</a></li>
+            <li><a href="../extracurriculars.html" class="nav-link" data-page="extracurriculars">Extracurriculars</a></li>
+            <li><a href="../contact.html" class="nav-link" data-page="contact">Contact</a></li>
+        </ul>
     </nav>
 
     <header class="project-header">
@@ -36,6 +35,7 @@
                 <p>
                     IBDb is a comprehensive web database application developed as a team project at James Madison University. The platform enables book enthusiasts to search an extensive database of books by title, author, or genre, create personalized user profiles, and manage custom reading lists. As a team lead and full-stack developer, I coordinated a four-person team to deliver a polished, feature-rich application that demonstrates proficiency in database design, backend development, frontend implementation, and project management.
                 </p>
+                <br>
                 <p>
                     The application showcases expertise in web development fundamentals, database architecture, and collaborative software engineering practices. With features like book search, user authentication, personalized reading lists, and dynamic data visualization, IBDb represents a complete, production-ready web application.
                 </p>
@@ -235,6 +235,17 @@ andlt;/htmlandgt;</code></pre>
             </footer>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer>
+    <p>&copy; 2025 Bridget Kimball. All rights reserved.</p>
+        <p>Created with passion for web development</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bridget-kimball/" target="_blank" title="LinkedIn">in</a>
+            <a href="https://github.com/BridgetKimball" target="_blank" title="GitHub">gh</a>
+            <a href="mailto:bridget.kimball@icloud.com" target="_blank" title="Email">@</a>
+        </div>
+    </footer>
 
     <script src="../../scripts/script.js"></script>
 </body>
