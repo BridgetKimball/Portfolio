@@ -3,169 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelPaws - Bridget Kimball</title>
+    <title>PixelPaws - Bridget Kimball Portfolio</title>
     <link rel="stylesheet" href="../../style/style.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <button type="button" class="hamburger" id="hamburger-btn">☰</button>
-        <ul>
-            <li><a href="../../../index.html" class="nav-link" data-page="home">Home</a></li>
-            <li><a href="../experience.html" class="nav-link" data-page="experience">Experience</a></li>
-            <li><a href="../projects.html" class="nav-link active" data-page="projects">Academic Projects</a></li>
-            <li><a href="../education.html" class="nav-link" data-page="education">Education</a></li>
-            <li><a href="../extracurriculars.html" class="nav-link" data-page="extracurriculars">Extracurriculars</a></li>
-            <li><a href="../contact.html" class="nav-link" data-page="contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">Bridget Kimball</div>
+                <ul class="nav-menu">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../projects.html">Projects</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../projects.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <!-- Header -->
-    <header>
-        <h1>PixelPaws</h1>
-        <p>An Interactive Web Application</p>
-    </header>
-
-    <!-- Main Content -->
     <main class="container">
-        <section>
-            <div class="right-align-margin">
-                <a href="../projects.html" class="btn btn-secondary">← Back to Projects</a>
-            </div>
+        <article class="project-detail">
+            <header class="project-header">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+                <h1>PixelPaws</h1>
+                <p class="project-subtitle">An interactive web application that brings comfort and companionship through a customizable virtual pet</p>
+            </header>
 
-            <h2>Overview and Summary</h2>
-            <p>PixelPaws is an interactive web application I designed and developed to bring comfort, creativity, and companionship
-                into the digital space. The goal of the project is to give users a fun, low-stress way to relax and recharge while
-                experiencing some of the emotional benefits of pet ownership without the challenges of cost, time, or housing
-                restrictions.</p>
+            <!-- Overview & Summary -->
+            <section class="project-section">
+                <h2>Overview & Summary</h2>
+                <p>
+                    PixelPaws is an interactive web application designed to bring comfort, creativity, and companionship into the digital space. The application allows users to create and care for a customizable virtual pet that reacts to real-world weather conditions. On a sunny day, the pet might appear cheerful and eager to play. On a rainy afternoon, it may curl up for a nap. These small, reactive details make the pet feel alive and encourage users to take short breaks during the day to interact with their virtual companion.
+                </p>
+                <p>
+                    Inspired by the positive impact that pets can have on mental health, PixelPaws provides a fun, low-stress way to relax and recharge while experiencing some of the emotional benefits of pet ownership without the challenges of cost, time, or housing restrictions.
+                </p>
+            </section>
 
-            <p>PixelPaws was inspired by the positive impact that pets can have on mental health. The application allows users to
-                create and care for a customizable virtual pet that reacts to real-world weather conditions. On a sunny day, the
-                pet might appear cheerful and eager to play. On a rainy afternoon, it may curl up for a nap. These small, reactive
-                details make the pet feel alive and encourage users to take short breaks during the day.</p>
+            <!-- Project Information -->
+            <section class="project-section">
+                <h2>Project Information</h2>
+                <div class="project-info-grid">
+                    <div class="info-item">
+                        <h3>Timeline</h3>
+                        <p>November 2025 - Ongoing</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Type</h3>
+                        <p>Solo Project</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Status</h3>
+                        <p>Active Development</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Live Demo</h3>
+                        <p><a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" style="color: var(--secondary-color); font-weight: 600;">Play PixelPaws</a></p>
+                    </div>
+                </div>
+            </section>
 
-            <p>The web app includes three main pages: Home, Customization, and Play. The Home page displays the pet's current mood
-                or activity, which updates automatically through a weather API. The Customization page lets users personalize their
-                pet by choosing traits such as ears, eyes, tail, color, and name. The Play page allows users to feed or interact
-                with their pet through simple and enjoyable actions.</p>
+            <!-- Key Features -->
+            <section class="project-section">
+                <h2>Key Features</h2>
+                <ul class="features-list">
+                    <li><strong>Weather Integration:</strong> Pet mood and appearance respond to real-world weather conditions through API integration</li>
+                    <li><strong>Pet Customization:</strong> Users can personalize their pet by choosing ears, eyes, tail, color, and name</li>
+                    <li><strong>Interactive Care:</strong> Feed, play with, and interact with your pet through simple and enjoyable actions</li>
+                    <li><strong>Local Data Persistence:</strong> All pet data saved in localStorage keeps the pet consistent across sessions</li>
+                    <li><strong>Responsive Design:</strong> Fully responsive interface that works seamlessly on desktop and mobile devices</li>
+                </ul>
+            </section>
 
-            <br>
+            <!-- Technologies & Skills -->
+            <section class="project-section">
+                <h2>Technologies & Skills</h2>
+                <div class="tech-boxes">
+                    <div class="tech-box">
+                        <h3>Frontend</h3>
+                        <p>HTML5, CSS3, JavaScript ES6+</p>
+                    </div>
+                    <div class="tech-box">
+                        <h3>APIs & Data</h3>
+                        <p>Weather API, JSON, LocalStorage</p>
+                    </div>
+                    <div class="tech-box">
+                        <h3>Graphics & Animation</h3>
+                        <p>Canvas API, State-based Rendering, Visual Effects</p>
+                    </div>
+                    <div class="tech-box">
+                        <h3>Design & UX</h3>
+                        <p>Web Design, UX/UI, Responsive Layout</p>
+                    </div>
+                </div>
+            </section>
 
-            <div class="card">
-                <div class="card-title">Project Information</div>
-                <div class="margin-top-1rem">
-                    <p><strong>Date Completed:</strong> Ongoing</p>
-                    <p><strong>Start Date:</strong> November 2025</p>
-                    <p><strong>Team Size:</strong> Solo</p>
-                    <p><strong>Live Demo:</strong> <a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank">Play PixelPaws</a></p>
+            <!-- Implementation Highlights -->
+            <section class="project-section">
+                <h2>Implementation Highlights</h2>
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <h3>Game State Management</h3>
+                        <p>Implemented a robust state management system to track pet health, happiness, hunger, and other attributes. The system uses object-oriented JavaScript to create pet objects with their own methods and properties.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Animation & Graphics</h3>
+                        <p>Utilized the HTML5 Canvas API to create smooth animations for pet movements, expressions, and interactions. The animation loop updates the pet's visual state based on its internal state.</p>
+                    </div>
+                    <div class="highlight-card">
+                        <h3>Weather Integration</h3>
+                        <p>Integrated a weather API to dynamically update the pet's mood and behavior based on real-world weather conditions, creating a responsive and immersive experience.</p>
+                    </div>
                 </div>
-            </div>
+            </section>
 
-            <div class="centered-image-container">
-                <img src="../../../images/pixelpaws_home.png" alt="PixelPaws Homepage" class="pixelpaws-image">
-            </div>
+            <!-- Learning Outcomes -->
+            <section class="project-section">
+                <h2>Learning Outcomes</h2>
+                <ul class="learning-outcomes-list">
+                    <li>Deepened understanding of JavaScript OOP principles and object-oriented design patterns</li>
+                    <li>Gained experience with Canvas API and graphics programming for interactive animations</li>
+                    <li>Learned effective state management techniques for complex application logic</li>
+                    <li>Improved UX/UI design skills through iterative user feedback and refinement</li>
+                    <li>Practiced responsive web design patterns for cross-device compatibility</li>
+                    <li>Strengthened version control and Git workflows for solo project development</li>
+                </ul>
+            </section>
 
-            <h3>Key Features</h3>
-            <div class="features-grid">
-                <div class="card">
-                    <div class="card-title">Weather Integration</div>
-                    <p>Pet mood and appearance respond to real-world weather conditions through API integration.</p>
-                </div>
-                <div class="card">
-                    <div class="card-title">Pet Customization</div>
-                    <p>Users can personalize their pet by choosing ears, eyes, tail, color, and name.</p>
-                </div>
-                <div class="card">
-                    <div class="card-title">Interactive Care</div>
-                    <p>Feed, play with, and interact with your pet through simple and enjoyable actions.</p>
-                </div>
-                <div class="card">
-                    <div class="card-title">Local Data Persistence</div>
-                    <p>All pet data saved in localStorage keeps the pet consistent across sessions.</p>
-                </div>
-                <div class="card">
-                    <div class="card-title">Responsive Design</div>
-                    <p>Fully responsive interface that works seamlessly on desktop and mobile devices.</p>
-                </div>
-            </div>
+            <!-- Future Enhancements -->
+            <section class="project-section">
+                <h2>Future Enhancements & Features</h2>
+                <ul class="features-list">
+                    <li><strong>Pet Personalities:</strong> Give each pet unique personality traits that influence their behavior and interactions</li>
+                    <li><strong>Holiday & Seasonal Themes:</strong> Implement rotating themes and special events tied to holidays and seasons</li>
+                    <li><strong>Pet Experience Levels:</strong> Allow pets to level up with continued interaction, unlocking new customization options</li>
+                    <li><strong>Mini-Games:</strong> Develop interactive games (Memory Match, Tic-Tac-Toe, Rock Paper Scissors) to boost pet happiness</li>
+                    <li><strong>Study Buddy Timer:</strong> Implement a Pomodoro-style timer that encourages work-life balance with pet interaction breaks</li>
+                </ul>
+            </section>
 
-            <h3>Technologies and Skills</h3>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <h4>Frontend</h4>
-                    <p>HTML5, CSS3, JavaScript ES6+</p>
-                </div>
-                <div class="skill-item">
-                    <h4>APIs and Data</h4>
-                    <p>Weather API, JSON, LocalStorage</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Graphics and Animation</h4>
-                    <p>Canvas API, State-based Rendering, Visual Effects</p>
-                </div>
-                <div class="skill-item">
-                    <h4>Design and UX</h4>
-                    <p>Web Design, UX/UI, Responsive Layout</p>
-                </div>
-            </div>
+            <!-- Code Segments -->
+            <section class="project-section">
+                <h2>Code Segments</h2>
+                <p>Here are examples of code from the PixelPaws project demonstrating various aspects of the application:</p>
 
-            <h3>Implementation Highlights</h3>
-            <div class="card">
-                <div class="card-title">Game State Management</div>
-                <div class="card-description">
-                    Implemented a robust state management system to track pet health, happiness, hunger, and other attributes. The system uses object-oriented JavaScript to create pet objects with their own methods and properties.
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Animation and Graphics</div>
-                <div class="card-description">
-                    Utilized the HTML5 Canvas API to create smooth animations for pet movements, expressions, and interactions. The animation loop updates the pet's visual state based on its internal state.
-                </div>
-            </div>
-
-            <div class="card">
-                <div class="card-title">Weather Integration</div>
-                <div class="card-description">
-                    Integrated a weather API to dynamically update the pet's mood and behavior based on real-world weather conditions, creating a responsive and immersive experience.
-                </div>
-            </div>
-
-            <h3>Learning Outcomes</h3>
-            <ul class="learning-outcomes-list">
-                <li>Deepened understanding of JavaScript OOP principles and object-oriented design patterns</li>
-                <li>Gained experience with Canvas API and graphics programming for interactive animations</li>
-                <li>Learned effective state management techniques for complex application logic</li>
-                <li>Improved UX/UI design skills through iterative user feedback and refinement</li>
-                <li>Practiced responsive web design patterns for cross-device compatibility</li>
-                <li>Strengthened version control and Git workflows for solo project development</li>
-            </ul>
-
-            <h3>Future Enhancements and Features</h3>
-            <div class="future-improvements-grid">
-                <div class="card">
-                    <p><strong>Pet Personalities:</strong> Give each pet unique personality traits that influence their behavior and interactions</p>
-                </div>
-                <div class="card">
-                    <p><strong>Holiday and Seasonal Themes:</strong> Implement rotating themes and special events tied to holidays and seasons</p>
-                </div>
-                <div class="card">
-                    <p><strong>Pet Experience Levels:</strong> Allow pets to level up with continued interaction, unlocking new customization options</p>
-                </div>
-                <div class="card">
-                    <p><strong>Mini-Games:</strong> Develop interactive games (Memory Match, Tic-Tac-Toe, Rock Paper Scissors) to boost pet happiness</p>
-                </div>
-                <div class="card">
-                    <p><strong>Study Buddy Timer:</strong> Implement a Pomodoro-style timer that encourages work-life balance with pet interaction breaks</p>
-                </div>
-            </div>
-
-            <h3>Code Segments</h3>
-            <p>Here are examples of code from the PixelPaws project demonstrating various aspects of the application:</p>
-
-            <div class="code-section">
-                <h4>HTML - Pet Display Structure</h4>
-                <p>This HTML demonstrates the semantic structure of the pet display with customizable components:</p>
+                <!-- HTML Example -->
+                <h3>HTML - Pet Display Structure</h3>
                 <pre><code>&lt;div class="pet-container"&gt;
     &lt;div class="pet-display sunny"&gt;
         &lt;div class="weather-effects"&gt;
@@ -191,11 +174,9 @@
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/div&gt;</code></pre>
-            </div>
 
-            <div class="code-section">
-                <h4>CSS - Pet Color Customization</h4>
-                <p>CSS variables and dynamic styling for customizing pet appearance based on user selections:</p>
+                <!-- CSS Example -->
+                <h3>CSS - Pet Color Customization</h3>
                 <pre><code>:root {
     --primary-purple: #660066;
     --light-purple: #DFCDE7;
@@ -204,8 +185,6 @@
     --pet-ear-inner: #FFC0CB;
     --sunny-bg: #FFE5B4;
     --rainy-bg: #B0E0E6;
-    --font-heading: 'Georgia', serif;
-    --font-body: 'Arial', sans-serif;
 }
 
 .pet-display {
@@ -229,11 +208,9 @@
     height: 150px;
     position: relative;
 }</code></pre>
-            </div>
 
-            <div class="code-section">
-                <h4>JavaScript - Customization State Management</h4>
-                <p>JavaScript state management system for tracking and updating pet customization options:</p>
+                <!-- JavaScript Example -->
+                <h3>JavaScript - Customization State Management</h3>
                 <pre><code>const petCustomization = {
     color: 'gray',
     ears: 'triangles',
@@ -250,11 +227,10 @@ const customizationHistory = {
 
     saveState(state) {
         this.undoStack.push(JSON.parse(JSON.stringify(state)));
-        if (this.undoStack.length &gt; this.maxHistorySize) {
+        if (this.undoStack.length > this.maxHistorySize) {
             this.undoStack.shift();
         }
         this.redoStack = [];
-        updateUndoRedoButtons();
     },
 
     undo() {
@@ -262,30 +238,16 @@ const customizationHistory = {
         this.redoStack.push(JSON.parse(JSON.stringify(petCustomization)));
         const previousState = this.undoStack.pop();
         Object.assign(petCustomization, previousState);
-        updateUndoRedoButtons();
         return previousState;
     }
 };</code></pre>
-            </div>
-            <br>
+            </section>
 
-            <div class="centered-margin-top">
-                <a href="../projects.html" class="btn btn-secondary ml-1rem">Back to Projects</a>
-                <a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" class="btn">Play PixelPaws</a>
-            </div>
-        </section>
+            <footer class="project-footer">
+                <a href="../projects.html" class="back-link">← Back to Projects</a>
+            </footer>
+        </article>
     </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Bridget Kimball. All rights reserved.</p>
-        <p>Created with passion for web development</p>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/bridget-kimball/" target="_blank" title="LinkedIn">in</a>
-            <a href="https://github.com/BridgetKimball" target="_blank" title="GitHub">gh</a>
-            <a href="mailto:bridget.kimball@icloud.com" target="_blank" title="Email">@</a>
-        </div>
-    </footer>
 
     <script src="../../scripts/script.js"></script>
 </body>
