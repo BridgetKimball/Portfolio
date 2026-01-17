@@ -21,17 +21,18 @@
         </div>
     </nav>
 
+    <header class="project-header">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+        <h1>IBDb: Internet Book Database</h1>
+        <p class="project-subtitle">A collaborative full-stack web application for book discovery and personal library management</p>
+    </header>
+
     <main class="container">
         <article class="project-detail">
-            <header class="project-header">
-                <a href="../projects.html" class="back-link">← Back to Projects</a>
-                <h1>IBDb: Internet Book Database</h1>
-                <p class="project-subtitle">A collaborative full-stack web application for book discovery and personal library management</p>
-            </header>
 
-<!-- Overview & Summary -->
+<!-- Overview and Summary -->
             <section class="project-section">
-                <h2>Overview & Summary</h2>
+                <h2>Overview and Summary</h2>
                 <p>
                     IBDb is a comprehensive web database application developed as a team project at James Madison University. The platform enables book enthusiasts to search an extensive database of books by title, author, or genre, create personalized user profiles, and manage custom reading lists. As a team lead and full-stack developer, I coordinated a four-person team to deliver a polished, feature-rich application that demonstrates proficiency in database design, backend development, frontend implementation, and project management.
                 </p>
@@ -68,16 +69,16 @@
                 <h2>Key Features</h2>
                 <ul class="features-list">
                     <li><strong>Advanced Book Search:</strong> Multi-criteria search functionality allowing users to find books by title, author, or genre with real-time database queries</li>
-                    <li><strong>User Profiles & Authentication:</strong> Personalized user accounts with secure authentication, enabling each user to maintain their own book collections</li>
+                    <li><strong>User Profiles and Authentication:</strong> Personalized user accounts with secure authentication, enabling each user to maintain their own book collections</li>
                     <li><strong>Custom Reading Lists:</strong> Users can create and manage personalized book collections, organized by reading status (Current Reads, To Be Read)</li>
                     <li><strong>Data Visualization:</strong> Google Charts integration for dynamic visualization of book ratings, genres, and user statistics</li>
                     <li><strong>Responsive Design:</strong> Professional front-end design with HTML and CSS providing seamless user experience across devices</li>
                 </ul>
             </section>
 
-            <!-- Technologies & Skills -->
+            <!-- Technologies and Skills -->
             <section class="project-section">
-                <h2>Technologies & Skills</h2>
+                <h2>Technologies and Skills</h2>
                 <div class="tech-boxes">
                     <div class="tech-box">
                         <h3>Backend Development</h3>
@@ -132,7 +133,7 @@
 
             <!-- Future Enhancements -->
             <section class="project-section">
-                <h2>Future Enhancements & Features</h2>
+                <h2>Future Enhancements and Features</h2>
                 <ul class="features-list">
                     <li><strong>Social Features:</strong> Add user-to-user book recommendations and social reading groups</li>
                     <li><strong>Advanced Analytics:</strong> Implement personalized book recommendations using machine learning algorithms</li>
@@ -205,28 +206,28 @@ cur.executemany(
 con.commit()</code></pre>
 
                 <!-- HTML/JavaScript Example -->
-                <h3>HTML & JavaScript - Frontend Interface</h3>
-                <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-    &lt;title&gt;Ratings By Book&lt;/title&gt;
-    &lt;script type="text/javascript" 
-            src="https://www.gstatic.com/charts/loader.js"&gt;
-    &lt;/script&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Ratings By Book&lt;/h1&gt;
-    &lt;form&gt;
-        &lt;label for="Book"&gt;Pick a BookID: &lt;/label&gt;
-        &lt;input type="text" name="BookID" 
-               value="{{ selected_book }}"&gt;
-        &lt;input type="submit" value="Search"&gt;
-    &lt;/form&gt;
+                <h3>HTML and JavaScript - Frontend Interface</h3>
+                <pre><code>andlt;!DOCTYPE htmlandgt;
+andlt;htmlandgt;
+andlt;headandgt;
+    andlt;titleandgt;Ratings By Bookandlt;/titleandgt;
+    andlt;script type="text/javascript"
+            src="https://www.gstatic.com/charts/loader.js"andgt;
+    andlt;/scriptandgt;
+andlt;/headandgt;
+andlt;bodyandgt;
+    andlt;h1andgt;Ratings By Bookandlt;/h1andgt;
+    andlt;formandgt;
+        andlt;label for="Book"andgt;Pick a BookID: andlt;/labelandgt;
+        andlt;input type="text" name="BookID"
+               value="{{ selected_book }}"andgt;
+        andlt;input type="submit" value="Search"andgt;
+    andlt;/formandgt;
 
-    &lt;div id="table_div"&gt;&lt;/div&gt;
-    &lt;div id="chart_div"&gt;&lt;/div&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    andlt;div id="table_div"andgt;andlt;/divandgt;
+    andlt;div id="chart_div"andgt;andlt;/divandgt;
+andlt;/bodyandgt;
+andlt;/htmlandgt;</code></pre>
             </section>
 
             <footer class="project-footer">

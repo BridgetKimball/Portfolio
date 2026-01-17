@@ -21,17 +21,18 @@
         </div>
     </nav>
 
+    <header class="project-header">
+        <a href="../projects.html" class="back-link">← Back to Projects</a>
+        <h1>PixelPaws</h1>
+        <p class="project-subtitle">An interactive web application that brings comfort and companionship through a customizable virtual pet</p>
+    </header>
+
     <main class="container">
         <article class="project-detail">
-            <header class="project-header">
-                <a href="../projects.html" class="back-link">← Back to Projects</a>
-                <h1>PixelPaws</h1>
-                <p class="project-subtitle">An interactive web application that brings comfort and companionship through a customizable virtual pet</p>
-            </header>
 
-            <!-- Overview & Summary -->
+            <!-- Overview and Summary -->
             <section class="project-section">
-                <h2>Overview & Summary</h2>
+                <h2>Overview and Summary</h2>
                 <p>
                     PixelPaws is an interactive web application designed to bring comfort, creativity, and companionship into the digital space. The application allows users to create and care for a customizable virtual pet that reacts to real-world weather conditions. On a sunny day, the pet might appear cheerful and eager to play. On a rainy afternoon, it may curl up for a nap. These small, reactive details make the pet feel alive and encourage users to take short breaks during the day to interact with their virtual companion.
                 </p>
@@ -58,7 +59,7 @@
                     </div>
                     <div class="info-item">
                         <h3>Live Demo</h3>
-                        <p><a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" style="color: var(--secondary-color); font-weight: 600;">Play PixelPaws</a></p>
+                        <p><a href="https://bridgetkimball.github.io/PixelPaws/" target="_blank" class="pixelpaws-link">Play PixelPaws</a></p>
                     </div>
                 </div>
             </section>
@@ -75,24 +76,24 @@
                 </ul>
             </section>
 
-            <!-- Technologies & Skills -->
+            <!-- Technologies and Skills -->
             <section class="project-section">
-                <h2>Technologies & Skills</h2>
+                <h2>Technologies and Skills</h2>
                 <div class="tech-boxes">
                     <div class="tech-box">
                         <h3>Frontend</h3>
                         <p>HTML5, CSS3, JavaScript ES6+</p>
                     </div>
                     <div class="tech-box">
-                        <h3>APIs & Data</h3>
+                        <h3>APIs and Data</h3>
                         <p>Weather API, JSON, LocalStorage</p>
                     </div>
                     <div class="tech-box">
-                        <h3>Graphics & Animation</h3>
+                        <h3>Graphics and Animation</h3>
                         <p>Canvas API, State-based Rendering, Visual Effects</p>
                     </div>
                     <div class="tech-box">
-                        <h3>Design & UX</h3>
+                        <h3>Design and UX</h3>
                         <p>Web Design, UX/UI, Responsive Layout</p>
                     </div>
                 </div>
@@ -107,7 +108,7 @@
                         <p>Implemented a robust state management system to track pet health, happiness, hunger, and other attributes. The system uses object-oriented JavaScript to create pet objects with their own methods and properties.</p>
                     </div>
                     <div class="highlight-card">
-                        <h3>Animation & Graphics</h3>
+                        <h3>Animation and Graphics</h3>
                         <p>Utilized the HTML5 Canvas API to create smooth animations for pet movements, expressions, and interactions. The animation loop updates the pet's visual state based on its internal state.</p>
                     </div>
                     <div class="highlight-card">
@@ -132,10 +133,10 @@
 
             <!-- Future Enhancements -->
             <section class="project-section">
-                <h2>Future Enhancements & Features</h2>
+                <h2>Future Enhancements and Features</h2>
                 <ul class="features-list">
                     <li><strong>Pet Personalities:</strong> Give each pet unique personality traits that influence their behavior and interactions</li>
-                    <li><strong>Holiday & Seasonal Themes:</strong> Implement rotating themes and special events tied to holidays and seasons</li>
+                    <li><strong>Holiday and Seasonal Themes:</strong> Implement rotating themes and special events tied to holidays and seasons</li>
                     <li><strong>Pet Experience Levels:</strong> Allow pets to level up with continued interaction, unlocking new customization options</li>
                     <li><strong>Mini-Games:</strong> Develop interactive games (Memory Match, Tic-Tac-Toe, Rock Paper Scissors) to boost pet happiness</li>
                     <li><strong>Study Buddy Timer:</strong> Implement a Pomodoro-style timer that encourages work-life balance with pet interaction breaks</li>
@@ -149,31 +150,31 @@
 
                 <!-- HTML Example -->
                 <h3>HTML - Pet Display Structure</h3>
-                <pre><code>&lt;div class="pet-container"&gt;
-    &lt;div class="pet-display sunny"&gt;
-        &lt;div class="weather-effects"&gt;
-            &lt;div class="star-bg"&gt;&lt;/div&gt;
-        &lt;/div&gt;
+                <pre><code>andlt;div class="pet-container"andgt;
+    andlt;div class="pet-display sunny"andgt;
+        andlt;div class="weather-effects"andgt;
+            andlt;div class="star-bg"andgt;andlt;/divandgt;
+        andlt;/divandgt;
 
-        &lt;div class="pet"&gt;
-            &lt;!-- Ears --&gt;
-            &lt;div class="ears"&gt;
-                &lt;div class="ear left"&gt;&lt;/div&gt;
-                &lt;div class="ear right"&gt;&lt;/div&gt;
-            &lt;/div&gt;
+        andlt;div class="pet"andgt;
+            andlt;!-- Ears --andgt;
+            andlt;div class="ears"andgt;
+                andlt;div class="ear left"andgt;andlt;/divandgt;
+                andlt;div class="ear right"andgt;andlt;/divandgt;
+            andlt;/divandgt;
 
-            &lt;!-- Face --&gt;
-            &lt;div class="face"&gt;
-                &lt;div class="eyes"&gt;
-                    &lt;div class="eye left"&gt;&lt;/div&gt;
-                    &lt;div class="eye right"&gt;&lt;/div&gt;
-                &lt;/div&gt;
-                &lt;div class="nose"&gt;&lt;/div&gt;
-                &lt;div class="mouth"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+            andlt;!-- Face --andgt;
+            andlt;div class="face"andgt;
+                andlt;div class="eyes"andgt;
+                    andlt;div class="eye left"andgt;andlt;/divandgt;
+                    andlt;div class="eye right"andgt;andlt;/divandgt;
+                andlt;/divandgt;
+                andlt;div class="nose"andgt;andlt;/divandgt;
+                andlt;div class="mouth"andgt;andlt;/divandgt;
+            andlt;/divandgt;
+        andlt;/divandgt;
+    andlt;/divandgt;
+andlt;/divandgt;</code></pre>
 
                 <!-- CSS Example -->
                 <h3>CSS - Pet Color Customization</h3>
@@ -227,7 +228,7 @@ const customizationHistory = {
 
     saveState(state) {
         this.undoStack.push(JSON.parse(JSON.stringify(state)));
-        if (this.undoStack.length > this.maxHistorySize) {
+        if (this.undoStack.length &gt; this.maxHistorySize) {
             this.undoStack.shift();
         }
         this.redoStack = [];
@@ -242,12 +243,19 @@ const customizationHistory = {
     }
 };</code></pre>
             </section>
-
-            <footer class="project-footer">
-                <a href="../projects.html" class="back-link">← Back to Projects</a>
-            </footer>
         </article>
     </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Bridget Kimball. All rights reserved.</p>
+        <p>Created with passion for web development</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/bridget-kimball/" target="_blank" title="LinkedIn">in</a>
+            <a href="https://github.com/BridgetKimball" target="_blank" title="GitHub">gh</a>
+            <a href="mailto:bridget.kimball@icloud.com" target="_blank" title="Email">@</a>
+        </div>
+    </footer>
 
     <script src="../../scripts/script.js"></script>
 </body>
