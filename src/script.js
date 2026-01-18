@@ -1,10 +1,16 @@
 // ================================
+// EMAILJS INITIALIZATION
+// ================================
+emailjs.init('0tbP01ileIUeXT3Gs');
+
+// ================================
 // NAVIGATION ACTIVE STATE & HAMBURGER MENU
 // ================================
 document.addEventListener('DOMContentLoaded', function() {
     updateActiveNavLink();
     setupFormHandling();
     setupHamburgerMenu();
+    setupModalHandling();
 });
 
 function setupHamburgerMenu() {
@@ -72,19 +78,19 @@ function setupFormHandling() {
 
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+        // Debug: Log form submission
+        console.log('Contact form submitted');
         // Get form data
         const formData = new FormData(this);
         const data = {
             name: formData.get('name'),
             email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message'),
-            phone: formData.get('phone') || 'Not provided'
+            title: formData.get('subject'),
+            message: formData.get('message')
         };
 
         // Validate form
-        if (!data.name || !data.email || !data.subject || !data.message) {
+        if (!data.name || !data.email || !data.title || !data.message) {
             showFormStatus('Please fill in all required fields.', 'error');
             return;
         }
@@ -95,15 +101,26 @@ function setupFormHandling() {
             return;
         }
 
-        // Simulate form submission
-        // In a real application, you would send this to a backend service
-        console.log('Form data:', data);
-        
-        // Show success message
-        showFormStatus('Thank you! Your message has been sent successfully. I\'ll get back to you soon!', 'success');
-        
-        // Reset form
-        this.reset();
+        // Debug: Log data to be sent
+        console.log('Sending EmailJS data:', data);
+
+        // Some EmailJS setups require template_params as a key
+        emailjs.send('service_7pbr7yr', 'template_1af8kle', { ...data })
+            .then(
+                function(response) {
+                    console.log('Email sent successfully!', response);
+                    showMessageSentModal();
+                    form.reset();
+                },
+                function(error) {
+                    console.error('Failed to send email:', error);
+                    if (error && error.text) {
+                        showFormStatus('Error: ' + error.text, 'error');
+                    } else {
+                        showFormStatus('Failed to send message. Please try again or email me directly at bridget.kimball@icloud.com', 'error');
+                    }
+                }
+            );
     });
 }
 
@@ -120,6 +137,40 @@ function showFormStatus(message, type) {
     setTimeout(() => {
         statusElement.style.display = 'none';
     }, 5000);
+}
+
+function setupModalHandling() {
+    const modal = document.getElementById('messageSentModal');
+    const closeBtn = document.getElementById('closeModalBtn');
+
+    if (closeBtn) {
+        closeBtn.addEventListener('click', function() {
+            closeMessageSentModal();
+        });
+    }
+
+    // Close modal when clicking outside of it
+    if (modal) {
+        window.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeMessageSentModal();
+            }
+        });
+    }
+}
+
+function showMessageSentModal() {
+    const modal = document.getElementById('messageSentModal');
+    if (modal) {
+        modal.classList.add('show');
+    }
+}
+
+function closeMessageSentModal() {
+    const modal = document.getElementById('messageSentModal');
+    if (modal) {
+        modal.classList.remove('show');
+    }
 }
 
 function isValidEmail(email) {
