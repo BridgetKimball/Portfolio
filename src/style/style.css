@@ -307,7 +307,7 @@ section h4 {
    ================================ */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -371,7 +371,7 @@ section h4 {
 
 .learning-whiz-logo {
   object-fit: cover;
-  object-position: center top;
+  object-position: center center;
 }
 
 .project-card-title {
