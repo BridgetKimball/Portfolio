@@ -362,9 +362,16 @@ section h4 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.pixelpaws-logo {
-  max-width: 80%;
-  height: auto;
+.project-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+}
+
+.learning-whiz-logo {
+  object-fit: cover;
+  object-position: center top;
 }
 
 .project-card-title {
