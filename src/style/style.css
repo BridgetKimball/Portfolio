@@ -343,6 +343,10 @@ section h4 {
   padding: 1.5rem;
   background-color: var(--light-bg);
   border-bottom: 1px solid #ddd;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .project-card-image img {
@@ -370,8 +374,7 @@ section h4 {
 }
 
 .learning-whiz-logo {
-  object-fit: cover;
-  object-position: center center;
+  height: 180px !important;
 }
 
 .project-card-title {
@@ -952,6 +955,12 @@ pre code {
 /* ================================
    RESPONSIVE DESIGN
    ================================ */
+@media (max-width: 768px) {
+  .project-logo {
+    height: 50px;
+  }
+}
+
 @media (max-width: 894px) {
   header h1 {
     font-size: 2rem;
@@ -1022,6 +1031,10 @@ pre code {
     grid-template-columns: 1fr;
   }
 
+  .project-logo {
+    height: 120px;
+  }
+
   .profile-image {
     width: 150px;
     height: 150px;
@@ -1053,5 +1066,9 @@ pre code {
 
   .social-links {
     gap: 1rem;
+  }
+
+  .project-logo {
+    height: 100px;
   }
 }
