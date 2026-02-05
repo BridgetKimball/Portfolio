@@ -1,12 +1,12 @@
 // ================================
-// EMAILJS INITIALIZATION
-// ================================
-emailjs.init('0tbP01ileIUeXT3Gs');
-
-// ================================
 // NAVIGATION ACTIVE STATE & HAMBURGER MENU
 // ================================
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize EmailJS if available
+    if (typeof emailjs !== 'undefined') {
+        emailjs.init('0tbP01ileIUeXT3Gs');
+    }
+    
     updateActiveNavLink();
     setupFormHandling();
     setupHamburgerMenu();
@@ -16,19 +16,66 @@ document.addEventListener('DOMContentLoaded', function() {
 function setupHamburgerMenu() {
     const hamburger = document.getElementById('hamburger-btn');
     const navMenu = document.querySelector('nav ul');
+    const isMobile = () => window.innerWidth <= 894;
 
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
+    // Hamburger button toggle
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
             navMenu.classList.toggle('active');
         });
-
-        // Close menu when a link is clicked
-        document.querySelectorAll('nav a').forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-            });
-        });
     }
+
+    // Setup dropdown toggle for Experience and Projects
+    const dropdownParents = document.querySelectorAll('.nav-item-dropdown > a');
+    dropdownParents.forEach(parentLink => {
+        parentLink.addEventListener('click', function(e) {
+            if (!isMobile()) {
+                // On desktop, dropdowns work via hover - do nothing
+                return;
+            }
+            
+            // On mobile, toggle the dropdown menu
+            const dropdownItem = this.parentElement;
+            const isOpen = dropdownItem.classList.contains('active');
+            
+            if (!isOpen) {
+                // First click - open dropdown
+                e.preventDefault();
+                e.stopPropagation();
+                dropdownItem.classList.add('active');
+            } else {
+                // Second click - navigate to the parent page
+                // Let default behavior happen (follow the link)
+            }
+        });
+    });
+
+    // When clicking a submenu item, close everything
+    const submenuLinks = document.querySelectorAll('.dropdown-menu a');
+    submenuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all dropdowns
+            document.querySelectorAll('.nav-item-dropdown').forEach(item => {
+                item.classList.remove('active');
+            });
+            // Close main hamburger menu
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // When clicking regular navigation items, close hamburger menu
+    const regularLinks = document.querySelectorAll('nav > ul > li:not(.nav-item-dropdown) > a');
+    regularLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (navMenu) {
+                navMenu.classList.remove('active');
+            }
+        });
+    });
 }
 
 function updateActiveNavLink() {

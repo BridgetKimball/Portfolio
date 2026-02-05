@@ -165,19 +165,14 @@ nav a.active {
 @media (max-width: 894px) {
   .dropdown-menu {
     position: static;
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
+    display: none;
     background-color: rgba(52, 152, 219, 0.1);
-    transform: none;
     box-shadow: none;
-    transition: max-height 0.3s ease;
+    transition: all 0.3s ease;
   }
 
-  .nav-item-dropdown:hover .dropdown-menu,
   .nav-item-dropdown.active .dropdown-menu {
-    opacity: 1;
-    max-height: 500px;
+    display: block;
   }
 
   .dropdown-menu li a {
