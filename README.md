@@ -8,9 +8,9 @@ This portfolio website is a fully responsive, custom-built application that demo
 
 ## 📋 Project Overview
 
-**Purpose:** Create a professional portfolio website that effectively showcases technical skills, experience, academic projects, education, and extracurricular activities.
+**Purpose:** Create a professional portfolio website that effectively showcases technical skills, experience, projects, education, and extracurricular activities.
 
-**Live Site:** [View Portfolio](https://your-domain.com) (Update with your domain)
+**Live Site:** [View Portfolio](https://bridgetkimball.github.io/Portfolio/)
 
 This portfolio includes:
 - Professional design with modern CSS styling
@@ -44,7 +44,7 @@ Portfolio/
 ├── src/
 │   ├── html/
 │   │   ├── experience.html         # Work experience page
-│   │   ├── projects.html           # Academic projects overview
+│   │   ├── projects.html           # Projects overview
 │   │   ├── education.html          # Education background
 │   │   ├── extracurriculars.html   # Clubs and organizations
 │   │   ├── contact.html            # Contact and messaging
@@ -77,8 +77,8 @@ Portfolio/
 - Key skills developed
 - Timeline view
 
-### 3. **Academic Projects**
-- Grid-based display of academic projects
+### 3. **Projects**
+- Grid-based display of projects
 - Project cards with descriptions and technologies
 - Clickable project cards linking to detailed pages
 - PixelPaws project with full documentation
